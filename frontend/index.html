@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EV Scooter AI Consultant — Karachi Edition</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css"/>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+  <div id="login-screen" class="login-container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f4f7f6;">
+    <div class="login-card" style="text-align: center; max-width: 450px; width: 90%; padding: 40px; border-radius: 24px; background: white; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+      
+      <div class="login-icon" style="font-size: 4.5rem; color: #15803d; margin-bottom: 20px;">
+        <i class="ti ti-motorbike"></i>
+      </div>
+      
+      <h2 style="font-size: 1.8rem; font-weight: 700; color: #111; line-height: 1.2; margin-bottom: 15px;">
+        Are you ready for your personal bike purchasing consultation?
+      </h2>
+      
+      <p style="color: #666; margin-bottom: 30px; font-size: 1rem;">
+        Find the perfect EV Scooter for your daily travel in Karachi.
+      </p>
+      
+      <div style="text-align: left; margin-bottom: 25px;">
+        <label for="user-name-input" style="display: block; margin-bottom: 8px; font-weight: 600; color: #444;">Please enter your name:</label>
+        <input type="text" id="user-name-input" placeholder="e.g. Rafay..." autocomplete="off" 
+          style="width: 100%; padding: 14px; border: 2px solid #eee; border-radius: 12px; font-size: 1rem; outline: none; transition: border-color 0.3s; box-sizing: border-box;">
+      </div>
+      
+      <button onclick="startChatWithName()" class="start-btn" 
+        style="width: 100%; padding: 16px; border: none; border-radius: 12px; background-color: #15803d; color: white; font-weight: 600; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
+        Get Started <i class="ti ti-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-header chat-content" style="display: none;">
+    <div class="header-icon"><i class="ti ti-motorbike"></i></div>
+    <div>
+      <h1>EV Scooter AI Consultant</h1>
+    </div>
+  </div>
+
+  <div class="chat-box chat-content" style="display: none;">
+    <div class="chat-header">
+      <div class="agent-avatar"><i class="ti ti-robot"></i></div>
+      <div class="agent-info">
+        <div class="agent-name">Smart Purchase Assistant</div>
+        <div class="agent-status">
+          <span class="status-dot"></span> 
+          Online | Advisor
+        </div>
+      </div>
+      <button class="reset-btn" onclick="resetChat()">
+        <i class="ti ti-refresh"></i> Reset
+      </button>
+    </div>
+
+    <div class="step-bar" id="stepbar">
+      <div class="step active" id="s1">1. Greeting</div>
+      <div class="step" id="s2">2. Purpose</div>
+      <div class="step" id="s3">3. Location</div>
+      <div class="step" id="s4">4. Budget</div>
+      <div class="step" id="s5">5. Preference</div>
+      <div class="step" id="s6">6. Result</div>
+    </div>
+
+    <div class="msgs" id="msgs"></div>
+
+    <div class="quick-btns" id="qbtns"></div>
+
+    <div class="input-area">
+      <input id="inp" type="text" list="karachi-locations" placeholder="Type or select a Karachi area..." onkeydown="if(event.key==='Enter') sendMessage()" autocomplete="off" />
+      
+      <datalist id="karachi-locations"></datalist>
+
+      <button class="send-btn" onclick="sendMessage()"><i class="ti ti-send"></i></button>
+    </div>
+  </div>
+
+  <footer class="page-footer chat-content" style="display:none; text-align:center; padding: 20px; color: #666; font-size: 0.95rem;">
+    <p><b>Karachi City</b> ⚡ Help us keep it clean with EVs.</p>
+  </footer>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
