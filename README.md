@@ -124,7 +124,8 @@ Prices and specs are sample values for this project and may not match current ma
 ## Author
 
 **Muhammad Abdul Rafey Yashir**
-BS Artificial Intelligence student, Karachi, Pakistan
+  
+  Artificial Intelligence student, Karachi, Pakistan
 - LinkedIn: [abdulrafeyyashir](https://www.linkedin.com/in/abdulrafeyyashir)
 - Email: arafeyyashir@gmail.com
 - Portfolio: [abdulrafey05.github.io/Portfolio](https://abdulrafey05.github.io/Portfolio/)
